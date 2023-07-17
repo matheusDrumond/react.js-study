@@ -3,6 +3,7 @@ import './App.css'
 
 // Importações de componentes
 import ManageData from './components/ManageData'
+import ListRendering from './components/ListRendering'
 
 //Importando a imagem de assets
 import City from './assets/city.jpg'
@@ -22,6 +23,7 @@ function App() {
         <img src={City} alt="Imagem de uma cidade" />
       </div>
       <ManageData />
+      <ListRendering />
     </>
   )
 }
