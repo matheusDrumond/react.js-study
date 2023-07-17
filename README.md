@@ -23,5 +23,5 @@ Esse é um repositório com arquivos dos meus estudos de React.js que poderão s
 - Adicionando Imagens, através da pasta public e da pasta assets, diferentes abordagens depndendo se a imagem está dentro da pasta src ou não, direto no App.jsx;
 - Hooks -> Basicamente são funções que vão agilizar o desenvolvimento. Alguns hooks já vem prontos do React e outros podem ser criados pelos devs de forma personalizada, chamados de custom hooks;
 - Um dos hooks mais utilizados é o useState, serve para gerenciar o estado de algum dado, funciona melhor que a váriaveis pois é re-renderizado com a mudança de valores exemplificado em ManageData;
-- Renderização em lista -> é possível renderizar dados de listas através do jsx para exibir as infromações dentro de um array, como feito no componente ListRendering utilizando o método map de arrays;
+- Renderização em lista -> é possível renderizar dados de listas através do jsx para exibir as informações dentro de um array, como feito no componente ListRendering utilizando o método map de arrays;
 - Keys -> Os dados renderizados em lista devem conter keys únicas par cada item, é possível ver duas formas de atribuir keys no arquivo do componente ListRendering;
