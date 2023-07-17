@@ -16,4 +16,10 @@ Esse é um repositório com arquivos dos meus estudos de React.js que poderão s
 - Comentários com // no js e com {/* */} no jsx;
 - Template Expressions - colocar códigos js dentro de {} no jsx, sintaxe -> {algumCodigo} para acessar variaveis, propriedades de objetos e executar console.log(), por exemplo;
 - Hierarquização de componentes, componentes importados dentro de outros;
-- Eventos -> Como adicionar eventos aos componentes, as funções criadas fora e as inline functions;
+- Eventos -> Como adicionar eventos aos componentes, as funções criadas fora e as oneline functions;
+- Renderização: criar funções que retornam HTML fora do return do componente e dar diferentes procedimentos dependendo da lógica, a função renderSomething dentro do componente Events;
+
+# 03 - Avançando em React
+- Adicionando Imagens, através da pasta public e da pasta assets, diferentes abordagens depndendo se a imagem está dentro da pasta src ou não, direto no App.jsx;
+- Hooks -> Basicamente são funções que vão agilizar o desenvolvimento. Alguns hooks já vem prontos do React e outros podem ser criados pelos devs de forma personalizada, chamados de custom hooks;
+- Um dos hooks mais utilizados é o useState, serve para gerenciar o estado de algum dado, funciona melhor que a váriaveis pois é re-renderizado com a mudança de valores exemplificado em ManageData;
