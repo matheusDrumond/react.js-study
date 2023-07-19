@@ -8,7 +8,6 @@ const ManageData = () => {
 
     // Adicionando o valor através de useState
     const [number, setNumber] = useState(15);
-    console.log(number);
     return (
         <div>
             <div>

@@ -7,6 +7,12 @@ import ListRendering from './components/ListRendering'
 import ConditionalRender from './components/ConditionalRender'
 import ShowUserName from './components/ShowUserName'
 import CarDetails from './components/CarDetails'
+import Fragments from './components/Fragments'
+import Container from './components/Container'
+import ExecuteFunction from './components/ExecuteFunction'
+import Message from './components/Message'
+import ChangeMessageState from './components/ChangeMessageState'
+import UserDetails from './components/UserDetails'
 
 //Importação de hooks
 import { useState } from 'react'
@@ -24,6 +30,23 @@ function App() {
     {id: 3, brand: 'Lamborghini', color: 'Yellow', newCar: false, km: 1000},
     {id: 4, brand: 'BMW', color: 'Black', newCar: false, km: 2000}
   ]
+
+  function showMessage(){
+    console.log('Evento do componente pai executado!')
+  }
+
+  const [message, setMessage] =useState(' ')
+
+  function handleMessage(msg){
+    setMessage(msg);
+  };
+
+  const users = [
+    {id: 1, name: 'Matheus', age: 16, job: 'Programador'},
+    {id: 2, name: 'João', age: 20, job: 'Comerciante'},
+    {id: 3, name: 'Maria', age: 19, job: 'Designer'},
+    {id: 4, name: 'Ana', age: 17, job: 'Estudante'},
+  ];
 
   return (
     <>
@@ -47,13 +70,42 @@ function App() {
       {/*Props*/}
       <ShowUserName name={name} userName={userName} />
       {/*Destructuring*/}
-      <CarDetails brand='VolksWagen' km={0} color='black' newCar={true}/>
+      <CarDetails id={4} brand='VolksWagen' km={0} color='black' newCar={true}/>
       {/*Reaproveitamdnto de componentes*/}
-      <CarDetails brand='Audi' km={30000} color='white' newCar={false}/>
-      <CarDetails brand='Fiat' km={0} color='red' newCar={true}/>
+      <CarDetails id={5} brand='Audi' km={30000} color='white' newCar={false}/>
+      <CarDetails id={6} brand='Fiat' km={0} color='red' newCar={true}/>
       {/*Renderização de lista com array de objetos*/}
       {cars.map((car) => (
-        <CarDetails brand={car.brand} km={car.km} color={car.color} newCar={car.newCar}/>
+        <CarDetails 
+          key={car.id}
+          brand={car.brand} 
+          km={car.km} 
+          color={car.color} 
+          newCar={car.newCar}
+        />
+      ))}
+      {/*Fragments*/}
+      <Fragments propFragment='Terceiro título'/>
+      {/*Children*/}
+      <Container myValue={1}>
+        <p>Esse é o elemento children</p>
+      </Container>
+      <Container myValue={2}>
+        <p>Esse é o segundo elemento children</p>
+      </Container>
+      {/*Função como prop*/}
+      <ExecuteFunction myFunction={showMessage}/>
+      {/*State lift*/}
+      <Message msg={message}/>
+      <ChangeMessageState handleMessage={handleMessage}/>
+      {/*Prática, renderização de lista e renderização condicional*/}
+      {users.map((user) =>(
+        <UserDetails 
+          key={user.id}
+          name={user.name}
+          age={user.age}
+          job={user.job}
+        />
       ))}
     </>
   )
