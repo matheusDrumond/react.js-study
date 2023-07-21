@@ -43,3 +43,9 @@ Esse é um repositório com arquivos dos meus estudos de React.js que poderão s
 - Inline-style dinâmico -> O inline-style dinâmico aplica estilos baseados em uma condicional, para isso, é aplicado um if ternário que retorna duas possibilidades de estilo baseado no resulado da condicional;
 - Classes dinâmicas -> É uma prática melhor que o inline-style, em que é criada a classe em um arquivo css separado e importado, e a atribuição de classes vai depender de uma condicional. Em App.jsx existe uma atribuição de classe dinâmica, em que as classes estão declaradas em index.css e dependendo do resultado de um if ternário é definida a classe;
 - CSS modules -> Similar ao CSS de componente, porém é scoped, ou seja, é uma forma de criar CSS para componentes de forma que não vaze para outras partes indesejadas do código. Deve ser importada da mesma forma, com uma pequena alteração na sintaxe que pode ser observada na importação do componente Title, a única diferenca é que o nome do arquivo css tem que ter .module.css no final ao invés de apenas .css;
+
+# 05 - Forms com React
+- !Todas as sintaxes dos tópicos passados estarão registradas no componente MyForm!;
+- Criação de formulários -> São identificados com a tag form normalmente, com algumas diferenças sintáticas. Não é usado o atributo action, pois as requisições serão feitas de forma assíncrona;
+- Tag label envolvendo o input -> Abordagem sugerida pela própria documentação do React. Torna o atributo htmlFor opcional, simplificando o código sem perder a semântica;
+- Manipulação de dados -> O hook useState será utilizado para gerenciar os dados recebidos nos inputs, podendo armazená-los nas variáveis e utilizar o set para alterar. Existem duas formas de fazê-lo, como feito no input de name, ou com o inline-state feito no input de e-mail;
