@@ -1,0 +1,7 @@
+/* h1 {
+    color: red; não pode ser feito pois alteraria todos os h1 da página, mesmo os que não pertecem ao componente
+} */
+
+.mycomponent-paragraph {
+    color: green;  /* Essa forma é a correta, indicando ppr classes e IDs, evitabdo vazar o css */
+}

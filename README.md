@@ -12,7 +12,7 @@ Esse é um repositório com arquivos dos meus estudos de React.js que poderão s
 # 02 - Fundamentos do React
 - Criação de componentes e 'export default >componente<' para utilização posterior em outros arquivos;
 - Importação de componentes por meio de 'import Component from "./components/Componente"', feito com o FirstComponent;
-- Necessidade de colocar os elementos de um componente dentro de um elemento pai, normalmente um wrapper padrão '<> </>' ou em uma div. !Apenas um elementos pai por componente, que precisa estar dentro de um return!;
+- Necessidade de colocar os elementos de um componente dentro de um elemento pai, normalmente um wrapper padrão (fragment) '<> </>' ou em uma div. !Apenas um elementos pai por componente, que precisa estar dentro de um return!;
 - Comentários com // no js e com {/* */} no jsx;
 - Template Expressions - colocar códigos js dentro de {} no jsx, sintaxe -> {algumCodigo} para acessar variaveis, propriedades de objetos e executar console.log(), por exemplo;
 - Hierarquização de componentes, componentes importados dentro de outros;
@@ -35,3 +35,8 @@ Esse é um repositório com arquivos dos meus estudos de React.js que poderão s
 - Children prop -> É uma forma de acessar algum jsx que esteja dentro do local onde um componente esteja importado. O componente Container é importado em App e uma tag é inserida dentro dele, para que esse HTML seja impresso corretamente é necessário acessar children, como se fosse qualquer outra prop e utilizá-la, como feito no componente;
 - Functions como props -> São props comuns que permitem executar funções criadas no elemento pai dentro do elemento filho. Dentro de App.jsx foi criada a função showMessage, importada como prop pelo componente ExecuteFunction, assim dentro do componente filho foi possível criar um botão que execute a função criada no componente pai;
 - State lift -> Quando um valor é elevado do componente filho para o componente pai. Geralmente existem dois componentes, um que utiliza o state e outro que altera o state, então essas informações de valor precisam transitar entre elas passando pelo elemento pai para que sejam exibidas corretamente. Dentro de App existem dois componentes, o Message(1) e o ChangeMessageState(2), em que o 2 altera o estado da mensagem, transmite para o App, que transmite para o Message atualiza o estado e é renderizado em App para exibi-lo;
+
+# 04 - React e CSS
+- CSS Global -> O arquivo index.css é onde são feitas as alterações de estilo a nível global da aplicação, normalmente utilizado para resetar estilos que já vem automáticos no HTML ou para padronizar algumas questões, como deixar todos os títulos, formulários e fontes iguais e manter uma identidade visual;
+- CSS de Componentes -> Utilizado para estilizar um componente específico, e importado dentro dele. Normalmente os dois arquivos possuem o mesmo nome, por exemplo: O componente principal App.jsx importa o App.css, sua folha de estilo. Importante lembrar que esse método não é scoped, ou seja, pode acabar interferindo em outros componentes ou partes de código indesejadas, principalmente em aplicações maiores. Nessas situações é importante usar bem classes e IDs para não afetarem códigos indesejados;
+- Inline-style -> O inline-style do React é igual ao css, adicionado aos elementos através do atributo style. Assim como em qualquer HTML, o css inline deve ser evitado, pois pode dificultar a manutenção e tornar o código imprevisível. Deixa o código menos organizado;
