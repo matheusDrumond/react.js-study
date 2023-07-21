@@ -52,29 +52,29 @@ function App() {
     <>
       <h1>Avançando em React</h1>
 
-      {/*Imagem em Public*/}
+      {/* Imagem em Public */}
       <div>
-        {/*O React faz o link da imagem sem precisar indicar a pasta public*/}
+        {/* O React faz o link da imagem sem precisar indicar a pasta public */}
         <img src="/img1.jpg" alt="Paisagem" />
       </div>
-      {/*Imagem em assets*/}
+      {/* Imagem em assets */}
       <div>
         <img src={City} alt="Imagem de uma cidade" />
       </div>
-      {/*useState*/}
+      {/* useState */}
       <ManageData />
-      {/*Renderização em lista*/}
+      {/* Renderização em lista */}
       <ListRendering />
-      {/*RenderizaçãoCondicioanl*/}
+      {/* Renderização Condicioanl */}
       <ConditionalRender />
-      {/*Props*/}
+      {/* Props */}
       <ShowUserName name={name} userName={userName} />
-      {/*Destructuring*/}
+      {/* Destructuring */}
       <CarDetails id={4} brand='VolksWagen' km={0} color='black' newCar={true}/>
-      {/*Reaproveitamdnto de componentes*/}
+      {/* Reaproveitamdnto de componentes */}
       <CarDetails id={5} brand='Audi' km={30000} color='white' newCar={false}/>
       <CarDetails id={6} brand='Fiat' km={0} color='red' newCar={true}/>
-      {/*Renderização de lista com array de objetos*/}
+      {/* Renderização de lista com array de objetos */}
       {cars.map((car) => (
         <CarDetails 
           key={car.id}
@@ -84,21 +84,21 @@ function App() {
           newCar={car.newCar}
         />
       ))}
-      {/*Fragments*/}
+      {/* Fragments */}
       <Fragments propFragment='Terceiro título'/>
-      {/*Children*/}
+      {/* Children */}
       <Container myValue={1}>
         <p>Esse é o elemento children</p>
       </Container>
       <Container myValue={2}>
         <p>Esse é o segundo elemento children</p>
       </Container>
-      {/*Função como prop*/}
+      {/* Função como prop */}
       <ExecuteFunction myFunction={showMessage}/>
-      {/*State lift*/}
+      {/* State lift */}
       <Message msg={message}/>
       <ChangeMessageState handleMessage={handleMessage}/>
-      {/*Prática, renderização de lista e renderização condicional*/}
+      {/* Prática, renderização de lista e renderização condicional */}
       {users.map((user) =>(
         <UserDetails 
           key={user.id}
