@@ -53,3 +53,7 @@ Envio do formulário -> O listener onSubmit, ao ser colocado na tag de abertura 
 - Controlled inputs -> Alguns inputs podem receber valores 'pré-prontos' para agilizar processos, por exemplo, no App foi setado um usuário, e dentro do componente MyForm foi construído uma condicional em que se houver usuário os valores dos inputs de nome e e-mail já estariam preenchidos com as suas informações. Isso pode servir para respostas padrão ou outros tipos de facilidades;
 - Resetar formulários -> Em alguns casos é necessário limpar os campos de input após o envio, principalmente se o usuário precisar preencher mais de uma vez o forms, em casos de cadastrar produtos por exemplo ou outras tarefas que exijam a repetição. Com os states e os controlled inputs que já foram tratados isso fica fácil, basta atribuir um valor vazio aos inputs, '', dentro do evento de submit.
 - Observação: os 'inputs' de select e textarea tem sintaxes muito semelhantes e formas de obter o valor iguais, também são tratadas dentro do MyForm;
+
+# 06 - Projeto prático
+- Para praticar, construí um projeto de Secret Word baseado no código criado pelo [Matheus Battisti](https://github.com/matheusbattisti). Dentro do projeto foi possível praticar o uso dos componentes, uso de hooks e manipulação de states, renderizações condicionais e renderizações de listas, lógica, uso do CSS com React, formulários e destructuring de props;
+- Código todo comentado e organizado disponível para acesso também;

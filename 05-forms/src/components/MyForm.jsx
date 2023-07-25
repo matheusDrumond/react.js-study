@@ -51,7 +51,7 @@ const MyForm = ({user}) => {
             <div>
                 <label>
                     <span>Email</span>
-                    {/* Froma simplificada de receber o valor do input */}
+                    {/* Forma simplificada de receber o valor do input */}
                     <input 
                     type="email" 
                     name='email' 

@@ -65,13 +65,13 @@ function App() {
       <ManageData />
       {/* Renderização em lista */}
       <ListRendering />
-      {/* Renderização Condicioanl */}
+      {/* Renderização Condicional */}
       <ConditionalRender />
       {/* Props */}
       <ShowUserName name={name} userName={userName} />
       {/* Destructuring */}
       <CarDetails id={4} brand='VolksWagen' km={0} color='black' newCar={true}/>
-      {/* Reaproveitamdnto de componentes */}
+      {/* Reaproveitamento de componentes */}
       <CarDetails id={5} brand='Audi' km={30000} color='white' newCar={false}/>
       <CarDetails id={6} brand='Fiat' km={0} color='red' newCar={true}/>
       {/* Renderização de lista com array de objetos */}
