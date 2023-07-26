@@ -57,7 +57,7 @@ function App() {
   let wordLetters = word.split('');
   console.log(wordLetters);
   
-  wordLetters = wordLetters.map((l) => l.toLowerCase);
+  wordLetters = wordLetters.map((l) => l.toLowerCase());
 
   // Preenchendo os states
   setPickedWord(word);
@@ -75,6 +75,22 @@ function App() {
     // Verificar se a letra já foi utilizada
     if(guessedLetters.includes(padronizedLetter) || wrongLetters.includes(padronizedLetter)){
       return;
+    }
+
+    // Coloca a letra como certa ou errada
+    if (letters.includes(padronizedLetter)) {
+      setGuessedLetters((actualGuessedLetters) => [
+        ...actualGuessedLetters,
+        letter,
+      ]);
+    } else {
+      setWrongLetters((actualWrongLetters) => [
+        ...actualWrongLetters,
+        padronizedLetter,
+      ]);
+
+      // Quando a letra for errada diminui uma tentativa
+      setGuesses((actualGuesses) => actualGuesses - 1);
     }
   }
 

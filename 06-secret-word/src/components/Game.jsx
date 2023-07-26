@@ -20,16 +20,18 @@ const Game = ({
 
     // Recebimento da letra digitada no input
     const handleSubmit = (e) => {
+        // Cancela o reload
         e.preventDefault();
 
-        verifyLetter(letter)
+        // Verifica a letra
+        verifyLetter(letter);
 
-        // Limpar o input
+        // Limpa o input
         setLetter('');
-
+    
         // Manter o input selecionado
         letterInputRef.current.focus();
-    }
+      };
   return (
     <div className="game">
         <p className="points">
@@ -41,35 +43,38 @@ const Game = ({
         </h3>
         <p>Você ainda tem {guesses} tentativa(s)</p>
         <div className="wordContainer">
-            {/* Essa condicional gera um quadrado para cada letra da palavra e exibe ela caso seja recebida pelo input*/}
-            {letters.map((letter, index) => guessedLetters.includes(letter) ? (
-                    <span key={index} className='letter'>{letter}</span>
-                ) : (
-                    <span key={index} className='blankSquare'></span>
-                )
-            )}
-        </div>
-        <div className='letterContainer'>
-            <p>Tente advinhar uma letra</p>
-            <form onSubmit={handleSubmit}>
-                <input 
-                type="text" 
-                name='letter' 
-                maxLength='1' 
-                required 
-                onChange={(e) => setLetter(e.target.value)}
-                value={letter}
-                ref={letterInputRef}
-                />
-                <button>Jogar!</button>
-            </form>
-        </div>
-        <div className="wrongLettersContainer">
-            <p>Letras já utilizadas: </p>
-            {wrongLetters.map((letter, index) => (
-                <span key={index}>{letter}, </span>
-            ))}
-        </div>
+        {letters.map((letter, i) =>
+          guessedLetters.includes(letter) ? (
+            <span className="letter" key={i}>
+              {letter}
+            </span>
+          ) : (
+            <span key={i} className="blankSquare"></span>
+          )
+        )}
+      </div>
+
+      <div className="letterContainer">
+        <p>Tente adivnhar uma letra da palavra:</p>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name='letter'
+            maxLength="1"
+            onChange={(e) => setLetter(e.target.value)}
+            required
+            value={letter}
+            ref={letterInputRef}
+          />
+          <button>Jogar!</button>
+        </form>
+      </div>
+      <div className="wrongLettersContainer">
+        <p>Letras já utilizadas:</p>
+        {wrongLetters.map((letter, i) => (
+          <span key={i}>{letter}, </span>
+        ))}
+      </div>
     </div>
   )
 }
