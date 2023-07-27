@@ -11,6 +11,7 @@ import './App.css'
 import StartScreen from './components/StartScreen'
 import Game from './components/Game'
 import GameOver from './components/GameOver'
+import Rules from './components/Rules'
 
 const stages = [
   {id: 1, name: 'start'},
@@ -141,10 +142,56 @@ function App() {
     setGameStage(stages[0].name);
   }
 
+  // Função de mostrar as regras
+  const [rulesVisible, setRulesVisible] = useState(false);
+
+  const showRules = () => {
+    if(rulesVisible === false){
+      setRulesVisible(true)
+    } else if( rulesVisible === true){
+      setRulesVisible(false)
+    }
+  }
+
+  // Função de ajuda dos convidados
+  const [helpsQty, setHelpsQty] = useState(2);
+
+  const randomLetter = () => {
+    const randomLetter = letters[Math.floor(Math.random() * letters.length)]
+    return randomLetter;
+  }
+
+  const help = ()=> {
+    // Criando o array de letras da palavra
+    let wordLetters = pickedWord.split('');
+    wordLetters = wordLetters.map((l) => l.toLowerCase());
+
+    const notGuessedLetters = [... new Set(wordLetters)]. filter((letter) => guessedLetters.includes(letter) === false)
+
+    // Limitar a quantidade de ajudas
+    if(helpsQty > 0){
+      // Adicionar uma letra aleátória
+      let pickedLetter = randomLetter();
+      if(guessedLetters.includes(pickedLetter)){
+        pickedLetter = randomLetter();
+      } else {
+        setGuessedLetters((actualGuessedLetters) => [
+          ...actualGuessedLetters,
+          pickedLetter,
+        ])
+      }
+
+      // Diminuir a quantidade de ajudas
+      setHelpsQty((actualHelpsQty) => actualHelpsQty - 1)
+    } else {
+      return;
+    }
+  }
 
   return (
     <>
-      {gameStage === 'start' && <StartScreen startGame={startGame}/>}
+      {rulesVisible === true && <Rules showRules={showRules}/>}
+      {gameStage === 'start' && <StartScreen startGame={startGame} showRules={showRules}/>}
       {gameStage === 'game' && (
         <Game 
         verifyLetter={verifyLetter} 
@@ -154,6 +201,8 @@ function App() {
         wrongLetters={wrongLetters}
         guesses={guesses}
         score={score}
+        help={help}
+        helpsQty={helpsQty}
         />)
       }
       {gameStage === 'end' && 

@@ -11,7 +11,9 @@ const Game = ({
     guessedLetters, 
     wrongLetters, 
     guesses, 
-    score 
+    score,
+    help,
+    helpsQty 
 }) => {
     // State para gerenciar a letra do input
     const [letter, setLetter] = useState('');
@@ -36,6 +38,10 @@ const Game = ({
         <p className="points">
             <span>Pontuação: {score}</span>
         </p>
+        <div className='help_container'>
+          <button className='help' onClick={help}>Ajuda</button>
+          <span>Você tem {helpsQty} ajuda(s)</span>
+        </div>
         <h1>Advinhe a palavra</h1>
         <h3 className="hint">
             Dica: <span>{pickedCategory}</span>
