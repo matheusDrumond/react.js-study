@@ -10,7 +10,7 @@ import './App.css'
 //Importação de componentes
 import StartScreen from './components/StartScreen'
 import Game from './components/Game'
-import End from './components/End'
+import GameOver from './components/GameOver'
 
 const stages = [
   {id: 1, name: 'start'},
@@ -19,6 +19,7 @@ const stages = [
 ]
 
 function App() {
+
   // Funções para transitar entre as telas
   const [gameStage, setGameStage] = useState(stages[0].name);
 
@@ -36,7 +37,7 @@ function App() {
   const [score, setScore] = useState(0);
 
   // Função de escolher a palavra e a categoria 
-  const pickWordAndCategory = () => {
+  const pickWordAndCategory = useCallback(() => {
     //Escolhendo a categoria
     const categories = Object.keys(words);
     const category = categories[Math.floor(Math.random() * categories.length)];
@@ -45,27 +46,30 @@ function App() {
     const word = words[category][Math.floor(Math.random() * words[category].length)]
 
     return { word, category };
-  }
+  }, [words]);
 
   // Iniciar o jogo
-  const startGame = () => {    
-  // Escolher palavra e categoria aleatoriamente
-  const { word, category } = pickWordAndCategory();
-  console.log(word, category);
+  const startGame = useCallback(() => {   
+    // Limpar letras anteriores
+    resetLetters();
+    
+    // Escolher palavra e categoria aleatoriamente
+    const { word, category } = pickWordAndCategory();
+    (word, category);
 
-  // criando o array de letras da palavra
-  let wordLetters = word.split('');
-  console.log(wordLetters);
-  
-  wordLetters = wordLetters.map((l) => l.toLowerCase());
+    // Criando o array de letras da palavra
+    let wordLetters = word.split('');
+    (wordLetters);
+    
+    wordLetters = wordLetters.map((l) => l.toLowerCase());
 
-  // Preenchendo os states
-  setPickedWord(word);
-  setPickedCategory(category);
-  setLetters(wordLetters);
+    // Preenchendo os states
+    setPickedWord(word);
+    setPickedCategory(category);
+    setLetters(wordLetters);
 
     setGameStage(stages[1].name);
-  }
+  }, [pickWordAndCategory]);
 
   // Receber o input de letra
   const verifyLetter = (letter) => {
@@ -81,7 +85,7 @@ function App() {
     if (letters.includes(padronizedLetter)) {
       setGuessedLetters((actualGuessedLetters) => [
         ...actualGuessedLetters,
-        letter,
+        padronizedLetter,
       ]);
     } else {
       setWrongLetters((actualWrongLetters) => [
@@ -94,8 +98,46 @@ function App() {
     }
   }
 
+  // Função de resetar os states de letras
+  const resetLetters = () => {
+    setGuessedLetters([]);
+    setWrongLetters([]);
+  }
+
+
+  // Game over quando a pontuação chegar a 0
+  useEffect(() =>{
+    if(guesses <= 0){
+      // Resetar os states atuais
+      resetLetters();
+
+      // Vai para a tela de fim de jogo
+      setGameStage(stages[2].name)
+    }
+  }, [guesses])
+
+  // Checar a condição de vitória
+  useEffect(() => {
+    // Tornar o array de letras das palavras , únicas
+    const uniqueLetters = [... new Set(letters)]
+
+    // Condição de vitória
+    if(guessedLetters.length === uniqueLetters.length && gameStage === stages[1].name) {
+      // Adicionar pontuação
+      setScore((actualScore) => actualScore + 100)
+
+      // Trocar a palavra e reiniciar as letras 
+      startGame();
+    }
+
+  }, [guessedLetters, letters, startGame])
+
   // Reiniciar o jogo
   const retry = () => {
+    // Resetar pontuação e tentativas
+    setGuesses(5);
+    setScore(0);
+
     setGameStage(stages[0].name);
   }
 
@@ -106,8 +148,7 @@ function App() {
       {gameStage === 'game' && (
         <Game 
         verifyLetter={verifyLetter} 
-        pickedWord={pickedWord} 
-        pickedCategory={pickedCategory} 
+        pickedCategory={pickedCategory}
         letters={letters}
         guessedLetters={guessedLetters}
         wrongLetters={wrongLetters}
@@ -115,7 +156,11 @@ function App() {
         score={score}
         />)
       }
-      {gameStage === 'end' && <End retry={retry}/>}
+      {gameStage === 'end' && 
+      <GameOver 
+      retry={retry}
+      score={score}
+      />}
     </>
   )
 }

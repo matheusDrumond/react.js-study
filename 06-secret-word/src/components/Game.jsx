@@ -6,7 +6,6 @@ import { useState, useRef } from 'react'
 
 const Game = ({ 
     verifyLetter, 
-    pickedWord, 
     pickedCategory, 
     letters, 
     guessedLetters, 
@@ -58,6 +57,7 @@ const Game = ({
         <p>Tente adivnhar uma letra da palavra:</p>
         <form onSubmit={handleSubmit}>
           <input
+            autoFocus
             type="text"
             name='letter'
             maxLength="1"
