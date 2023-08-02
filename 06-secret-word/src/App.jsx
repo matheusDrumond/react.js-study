@@ -157,17 +157,18 @@ function App() {
   const [helpsQty, setHelpsQty] = useState(2);
 
   const randomLetter = () => {
-    const randomLetter = letters[Math.floor(Math.random() * letters.length)]
-    return randomLetter;
-  }
-
-  const help = ()=> {
     // Criando o array de letras da palavra
     let wordLetters = pickedWord.split('');
     wordLetters = wordLetters.map((l) => l.toLowerCase());
 
-    const notGuessedLetters = [... new Set(wordLetters)]. filter((letter) => guessedLetters.includes(letter) === false)
+    // Gerando um array com as letras da palavra  que ainda não foram advinhadas
+    const notGuessedLetters = [... new Set(wordLetters)].filter((letter) => guessedLetters.includes(letter) === false)
+    
+    const randomLetter = notGuessedLetters[Math.floor(Math.random() * letters.length)]
+    return randomLetter;
+  }
 
+  const help = ()=> {
     // Limitar a quantidade de ajudas
     if(helpsQty > 0){
       // Adicionar uma letra aleátória
