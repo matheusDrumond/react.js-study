@@ -12,7 +12,7 @@ const MyForm = ({user}) => {
     const [bio, setBio] = useState(user ? user.bio : '')
     const [role, setRole] = useState(user ? user.role : '');
 
-    // Froma mais complexa de recebr os valores do input
+    // Forma mais complexa de recebr os valores do input
     const handleName = (e) => {
         setName(e.target.value);
     }
