@@ -1,19 +1,84 @@
 {
-    "products": [
-      {
-        "id": 1,
-        "name": "Camisa",
-        "price": 59.9
-      },
-      {
-        "id": 2,
-        "name": "Calça vermelha",
-        "price": 90
-      },
-      {
-        "id": 3,
-        "name": "Boné aba reta",
-        "price": 29.9
-      }
-    ]
-  }
+  "products": [
+    {
+      "id": 1,
+      "name": "Camisa",
+      "price": 59.9
+    },
+    {
+      "id": 2,
+      "name": "Calça vermelha",
+      "price": 90
+    },
+    {
+      "id": 3,
+      "name": "Boné aba reta",
+      "price": 29.9
+    },
+    {
+      "name": "",
+      "price": "",
+      "id": 4
+    },
+    {
+      "name": "Regata Azul",
+      "price": "30",
+      "id": 5
+    },
+    {
+      "name": "Jaqueta Preta",
+      "price": "300",
+      "id": 6
+    },
+    {
+      "name": "Tênis branco",
+      "price": "400",
+      "id": 7
+    },
+    {
+      "name": "Meia cinza",
+      "price": "19",
+      "id": 8
+    },
+    {
+      "name": "Casaco verde",
+      "price": "350",
+      "id": 9
+    },
+    {
+      "name": "Blusa branca",
+      "price": "60",
+      "id": 10
+    },
+    {
+      "name": "Blusa branca",
+      "price": "60",
+      "id": 11
+    },
+    {
+      "name": "Blusa branca",
+      "price": "60",
+      "id": 12
+    },
+    {
+      "name": "Blusa branca",
+      "price": "60",
+      "id": 13
+    },
+    {
+      "name": "Blusa preta",
+      "price": "60",
+      "id": 14
+    },
+    {
+      "name": "Luva laranja",
+      "price": "25",
+      "id": 15
+    },
+    {
+      "name": "Moletom cinza",
+      "price": "200",
+      "id": 16
+    }
+  ]
+}
