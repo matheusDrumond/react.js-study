@@ -3,27 +3,34 @@ import './App.css'
 
 // Hooks
 import { useState, useEffect } from 'react'
+// Custom hook
+import { useFetch } from './hooks/useFetch'
+
+// URL do 'backend'
+const url = 'http://localhost:3000/products'
 
 function App() {
   const [products, setProducts] = useState([])
 
+  // Utilizando o custom hook 
+  const { data: items, httpConfig, loading, error } = useFetch(url)
+
   const [name, setName] = useState('')
   const [price, setPrice] = useState('')
 
-  const url = 'http://localhost:3000/products'
 
   // Resgatando dados
-  useEffect(() => {
-    async function fetchData(){
-      const res = await fetch(url);
+  //   useEffect(() => {
+  //     async function fetchData(){
+  //       const res = await fetch(url);
 
-      const data = await res.json();
+  //       const data = await res.json();
 
-      setProducts(data);
-  }
+  //       setProducts(data);
+  //   }
 
-  fetchData();
- }, [])
+  //   fetchData();
+  //  }, [])
 
   // Adicionando produtos
   const handleSubmit = async (e) => {
@@ -34,18 +41,21 @@ function App() {
       price,
     };
 
-    const res = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(product),
-    });
+    // const res = await fetch(url, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(product),
+    // });
 
-    const addedProduct = await res.json();
+    // const addedProduct = await res.json();
 
-    // Carregamento dinâmico
-    setProducts((prevProducts) => [...prevProducts, addedProduct]);
+    // // Carregamento dinâmico
+    // setProducts((prevProducts) => [...prevProducts, addedProduct]);
+
+    // Refatorando POST
+    httpConfig(product, 'POST');
 
     setName('');
     setPrice('');
@@ -54,13 +64,17 @@ function App() {
   return (
     <>
       <h1>Lista de produtos</h1>
-      <ul>
-        {products.map((product)=> (
-          <li key={product.id}>
-            {product.name} - R${product.price}
-          </li>
-        ))}
-      </ul>
+      {/* Loading */}
+      {loading && <p>Carregando produtos...</p>}
+      {error && <p>{error}</p>}
+      {!loading && !error &&       
+        <ul>
+          {items && items.map((product)=> (
+            <li key={product.id}>
+              {product.name} - R${product.price}
+            </li>
+          ))}
+        </ul>}
       <form onSubmit={handleSubmit} className='add_products'>
       <h2>Cadastre um novo produto</h2>
         <div>
@@ -89,8 +103,13 @@ function App() {
             />
           </label>
         </div>
+        {/* Loading no POST */}
 
-        <button type="submit">Cadastrar</button>
+        {/* Durante o carregamento não exibe o botão */}
+        {/* {!loading && <button type="submit">Cadastrar</button>} */}
+
+        {/* Desabilita o botão durante o carregamento */}
+        <button type="submit" disabled={loading}>Cadastrar</button>
       </form>
     </>
   )

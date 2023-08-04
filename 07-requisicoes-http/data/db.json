@@ -79,6 +79,176 @@
       "name": "Moletom cinza",
       "price": "200",
       "id": 16
+    },
+    {
+      "name": "Touca marrom",
+      "price": "70",
+      "id": 17
+    },
+    {
+      "name": "Touca marrom",
+      "price": "70",
+      "id": 18
+    },
+    {
+      "name": "Boné de aba curva",
+      "price": "150",
+      "id": 19
+    },
+    {
+      "name": "Legging preta",
+      "price": "90",
+      "id": 20
+    },
+    {
+      "name": "Legging preta",
+      "price": "90",
+      "id": 21
+    },
+    {
+      "name": "Bermuda de rosas",
+      "price": "70",
+      "id": 22
+    },
+    {
+      "name": "Bermuda de rosas",
+      "price": "70",
+      "id": 23
+    },
+    {
+      "name": "Bermuda de rosas",
+      "price": "70",
+      "id": 24
+    },
+    {
+      "name": "Polo vermelha",
+      "price": "199",
+      "id": 25
+    },
+    {
+      "name": "Gorro cinza",
+      "price": "50",
+      "id": 26
+    },
+    {
+      "name": "Gorro cinza",
+      "price": "50",
+      "id": 27
+    },
+    {
+      "name": "Gorro cinza",
+      "price": "50",
+      "id": 28
+    },
+    {
+      "name": "Gorro cinza",
+      "price": "50",
+      "id": 29
+    },
+    {
+      "name": "Chapéu bege",
+      "price": "45",
+      "id": 30
+    },
+    {
+      "name": "",
+      "price": "",
+      "id": 31
+    },
+    {
+      "name": "",
+      "price": "",
+      "id": 32
+    },
+    {
+      "name": "",
+      "price": "",
+      "id": 33
+    },
+    {
+      "name": "",
+      "price": "",
+      "id": 34
+    },
+    {
+      "name": "",
+      "price": "",
+      "id": 35
+    },
+    {
+      "name": "",
+      "price": "",
+      "id": 36
+    },
+    {
+      "name": "",
+      "price": "",
+      "id": 37
+    },
+    {
+      "name": "",
+      "price": "",
+      "id": 38
+    },
+    {
+      "name": "",
+      "price": "",
+      "id": 39
+    },
+    {
+      "name": "",
+      "price": "",
+      "id": 40
+    },
+    {
+      "name": "",
+      "price": "",
+      "id": 41
+    },
+    {
+      "name": "",
+      "price": "",
+      "id": 42
+    },
+    {
+      "name": "",
+      "price": "",
+      "id": 43
+    },
+    {
+      "name": "",
+      "price": "",
+      "id": 44
+    },
+    {
+      "name": "",
+      "price": "",
+      "id": 45
+    },
+    {
+      "name": "Chapéu marrom",
+      "price": "45",
+      "id": 46
+    },
+    {
+      "name": "Chapéu marrom",
+      "price": "45",
+      "id": 47
+    },
+    {
+      "name": "Chapéu vermelho",
+      "price": "45",
+      "id": 48
+    },
+    {
+      "name": "Chapéu vermelho",
+      "price": "45",
+      "id": 49
+    },
+    {
+      "name": "Chapéu vermelho",
+      "price": "45",
+      "id": 50
     }
   ]
 }
