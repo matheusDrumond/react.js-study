@@ -78,12 +78,11 @@ Envio do formulário -> O listener onSubmit, ao ser colocado na tag de abertura 
 # React Router 
 - Dentro de grandes projetos as aplicações vão precisar ter mais de uma página. Por exemplo, a aplicação pode ter uma home page, uma página de busca, outra para visualizar os produtos individualmente, reviews, e por aí vai. E o React Router é um pacote externo do React que permite criar essas páginas e alternar entre elas, então muito´possívelmente em grandes sprojetos vocês vão se deparar com o uso de Router, ou vão precisar usá-lo, é indispensável conhecê-lo;
 - Inicialização -> Para utilizar o React Router ele precisa estar instalado no seu projeto, e também vamos utilizar o json-server para simular nossa API assim como feito na última seção, então podemos fazer a instalação dos dois pacotes com 'npm i json-server react-router-dom'. Vamos precisar criar o script para rodar o server novamente, e criar nossa pasta 'data' com o arquivo 'db.json' que simularia nosso banco de dados (o scrpit pode ser copiado do meu package.json, serve apenas para não precisar escrever o comando completo de iniciar o servidor todas as vezes que fomos usá-lo, então é como um 'atalho' pra esse comando);
-- Configurações -> Antes de começar a usar o Router, algumas coisas precisam ser configuradas: 
-<ul>
- <li>BrowserRouter: Define a área do nosso App em que serão feitas as trocas de páginas, como uma barra de navegação, por exemplo;</li>
- <li>Routes: Define as rotas;</li>
- <li>Route: Define a rota de cada elemento de forma individual, fica dentro do Routes;</li>
-</ul>
+- Configurações -> Antes de começar a usar o Router, algumas coisas precisam ser configuradas:
+- BrowserRouter: Define a área do nosso App em que serão feitas as trocas de páginas, como uma barra de navegação, por exemplo;</li>
+- Routes: Define as rotas;</li>
+- Route: Define a rota de cada elemento de forma individual, fica dentro do Routes;</li>
+
 - Importações -> Antes de utilizar as configurações citadas no tópico anterior, elas precisam ser importadas, assim como feito dentro do nosso App;
 - Para administrar as páginas que vão ser navegadas, é padrão criar a pasta 'pages', semelhante a pasta components, onde vão ser armazenadas as páginas para melhorar a organização;
 - Para navegar entre as páginas, vai ser necessário utilizar o Link do React Router, e configurar o parâmetro 'to' com o valor da URL/path, para redirecionar o usuário para a página desejada. Assim que criados, vamos organizá-los dentro de uma navbar;
