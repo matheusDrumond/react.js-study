@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 
 // Hooks
 import { useFetch } from '../hooks/useFetch'
-import { useState } from 'react'
 
 const Home = () => {
   // Carregamento de dados
@@ -26,6 +25,8 @@ const Home = () => {
               <li key={item.id}>
                 <h2>{item.name}</h2>
                 <p>R${item.price}</p>
+                {/* Rota dinâmica */}
+                <Link to={`/products/${item.id}`}>Ver</Link>
               </li>
             ))}
         </ul>
