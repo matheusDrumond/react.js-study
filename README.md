@@ -81,7 +81,7 @@ Envio do formulário -> O listener onSubmit, ao ser colocado na tag de abertura 
 - Configurações -> Antes de começar a usar o Router, algumas coisas precisam ser configuradas:
 - BrowserRouter: Define a área do nosso App em que serão feitas as trocas de páginas, oque estiver dentro do BrowseRouter será alterado de acordo com a URL que o usuário estiver, oque estiver fora vai estar presente independentemente da URL, nesses casos, colocar uma barra de navegação fora dele pra ficar presente em todas as páginas;
 - Routes: Define as rotas;
-- Route: Define a rota de cada elemento de forma individual, fica dentro do Routes;</li>
+- Route: Define a rota de cada elemento de forma individual, fica dentro do Routes;
 - Importações -> Antes de utilizar as configurações citadas no tópico anterior, elas precisam ser importadas, assim como feito dentro do nosso App;
 - Para administrar as páginas que vão ser navegadas, é padrão criar a pasta 'pages', semelhante a pasta components, onde vão ser armazenadas as páginas para melhorar a organização;
 - Para navegar entre as páginas, vai ser necessário utilizar o Link do React Router, e configurar o parâmetro 'to' com o valor da URL/path, para redirecionar o usuário para a página desejada. Assim que criados, vamos organizá-los dentro de uma navbar;
