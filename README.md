@@ -57,6 +57,7 @@ Envio do formulário -> O listener onSubmit, ao ser colocado na tag de abertura 
 # 06 - Projeto prático
 - Para praticar, construí um projeto de Secret Word baseado no código criado pelo [Matheus Battisti](https://github.com/matheusbattisti). Dentro do projeto foi possível praticar o uso dos componentes, uso de hooks e manipulação de states, renderizações condicionais e renderizações de listas, lógica, uso do CSS com React, formulários e destructuring de props;
 - Código todo comentado e organizado disponível para acesso também;
+- [Clique aqui para jogar!](https://matheusdrumond.github.io/secret_word/)
 
 # 07 - Requisições HTTP com React
 - Nessa sessão vamos criar o projeto React normalmente e vamos instalar o JSON server, um pacote npm que simula uma API, e assim aprender a fazer as requisições e tratamento dos dados recebidos e enviados;
