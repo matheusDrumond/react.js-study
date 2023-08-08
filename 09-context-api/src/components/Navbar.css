@@ -1,0 +1,23 @@
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    font-size: 2em;
+    margin: 0 1em;
+    color: #FFF;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: grey;
+}
+
+.active {
+    color: blue;
+}
