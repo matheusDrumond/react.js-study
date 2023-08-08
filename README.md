@@ -79,8 +79,13 @@ Envio do formulário -> O listener onSubmit, ao ser colocado na tag de abertura 
 - Dentro de grandes projetos as aplicações vão precisar ter mais de uma página. Por exemplo, a aplicação pode ter uma home page, uma página de busca, outra para visualizar os produtos individualmente, reviews, e por aí vai. E o React Router é um pacote externo do React que permite criar essas páginas e alternar entre elas, então muito´possívelmente em grandes sprojetos vocês vão se deparar com o uso de Router, ou vão precisar usá-lo, é indispensável conhecê-lo;
 - Inicialização -> Para utilizar o React Router ele precisa estar instalado no seu projeto, e também vamos utilizar o json-server para simular nossa API assim como feito na última seção, então podemos fazer a instalação dos dois pacotes com 'npm i json-server react-router-dom'. Vamos precisar criar o script para rodar o server novamente, e criar nossa pasta 'data' com o arquivo 'db.json' que simularia nosso banco de dados (o scrpit pode ser copiado do meu package.json, serve apenas para não precisar escrever o comando completo de iniciar o servidor todas as vezes que fomos usá-lo, então é como um 'atalho' pra esse comando);
 - Configurações -> Antes de começar a usar o Router, algumas coisas precisam ser configuradas:
+<<<<<<< HEAD
 - BrowserRouter: Define a área do nosso App em que serão feitas as trocas de páginas, oque estiver dentro do BrowserRouter vai interagir com a troca de páginas;
 - Routes: Define o grupo de rotas, oque estiver dentro será alterado entre a troca de página;
+=======
+- BrowserRouter: Define a área do nosso App em que serão feitas as trocas de páginas, oque estiver dentro do BrowseRouter será alterado de acordo com a URL que o usuário estiver, oque estiver fora vai estar presente independentemente da URL, nesses casos, colocar uma barra de navegação fora dele pra ficar presente em todas as páginas é uma boa alternativa por exemplo;
+- Routes: Define as rotas;
+>>>>>>> 6672661b9a185a235a530303886b3703421f12f6
 - Route: Define a rota de cada elemento de forma individual, fica dentro do Routes;
 - Importações -> Antes de utilizar as configurações citadas no tópico anterior, elas precisam ser importadas, assim como feito dentro do nosso App;
 - Para administrar as páginas que vão ser navegadas, é padrão criar a pasta 'pages', semelhante a pasta components, onde vão ser armazenadas as páginas para melhorar a organização;
@@ -91,9 +96,14 @@ Envio do formulário -> O listener onSubmit, ao ser colocado na tag de abertura 
 - Nested routes -> As nested routes se referem a URLs mais complexas, como: '/products/:id/something' para mostrara algum detalhe dentro de uma URL que já é dinâmica e específica. Nesse caso foi possível criar um apágina de informações do produto, que varia de acordo com o produto selecionado;
 - Error 404 -> É possível criar facilmente uma página 404 com o React Router, basta criar o componente da página e definir um path *, dessa forma qualquer URL que não estiver entre as rotas definidas vai cair nessa página;
 - Link ativo -> É possível que vocês já tenham visto em sites quando o usuário está em determinada seção ou página e o ícone/palavra correspondente na barra de navegação tem alguma alteraçaõ de estilo, para gerar esse efeito, é necessário trocar o Link por NavLink dentro da nossa Navbar e acessar a propriedade isActive, que o próprio componente fornece, para atribuir classes dependendo se a URL atual é compatível ou não com a que está no atributo 'to' que já conhecemos. Se o link estiver ativo e houver uma classe 'active' o próprio jsx já atribui ela ao link automaticamente, caso você deseje fazer diferente eu deixei uma sintaxe exemplo de como acessar a propriedade e manipular as classes;
+<<<<<<< HEAD
 - Search Params -> Essa é uma forma de ter acesso ao que o usuário está procurando através de uma URL gerada em uma barra de pesquisa, ou seja, uma forma fácil de gerar uma funcionalidade de busca. No nosso caso foi criado uma barra de pesquisa que encontra os itens correspondentes ao pedido do usuário;
 - Redirecionamento de URL -> Talvez uma URL antiga tenha sido substituída por uma nova e quando o usuário acessar a antiga você precise redirecioná-lo para a nova. Assim, basta criar uma rota como as outras mas em elemento ao invés de atribuir um componente, você pode atribuir a URL correta;
 
 # Context API
 - Oque é? Context API é um recurso que facilita o compartilhamento de estados entre componentes. Quando houverem estados que vão ser necessários em diversos componentes ou que precisa ser utilizado em componentes muito 'distantes' dentro da aplicação, utilizar o state lift tantas vezes pode tornar o código muito complexo e por isso surge a necessidade de declarar dados 'globais'.
 - O Context precisa encapsular os componentes que vão utilizar/manipular os valores, normalmente armazenados no App.jsx ou index.jsx/main.jsx e os contextos estarão guardados na pasta context;
+=======
+- Search Params -> Essa é uma forma de ter acesso ao que o usuário está procurando através de uma URL gerada em uma barra de pesquisa, ou seja, uma forma fácil de gerar uma funcionalidade de busca. No noss caso foi criado uma barra de pesquisa que encontra os itens correspondentes ao pedido do usuário;
+- Redirecionamento de URL -> Talvez uma URL antiga tenha sido substituída por uma nova e quando o usuário acessar a antiga você precise redirecioná-lo para a nova. Assim, basta criar uma rota como as outras mas em element ao invés de atribuir um componente, você pode atribuir a URL correta;
+>>>>>>> 6672661b9a185a235a530303886b3703421f12f6
