@@ -106,3 +106,8 @@ Envio do formulário -> O listener onSubmit, ao ser colocado na tag de abertura 
 - Contextos mais complexos -> Podem ser que existam contextos para manipular várias situações, que podem mudar a resposta daquele context, e para isso vamos utilizar um recurso muito importante, o useReducer;
 - useReducer -> Contextos mais complexos podem ter variação no comportamento, e para controlar essas alterações utilizaremos o hook useReducer, que permite manipular dados mais complexos. Dentro do hook podemos determinar diferentes ações utilizando o switch
 - Alterando os contextos mais complexos -> Para realizar a alteração no contexto vamos utilizar uma função chamada dispatch, que já está no nosso reducer. Dentro da função devem estar todas as informações para realizar a troca do valor, utilizando o switch para retornar um novo contexto;
+
+# 10 - Projeto prático 2
+- Para praticar, vamos construir um projeto de Mini Blog baseado no código criado pelo [Matheus Battisti](https://github.com/matheusbattisti). Diferente do último projeto prático, vou colocar alguns tópicos aqui pra vocês, já que esse sistema engloba mais tecnologias e complexidades;
+- Código todo comentado e organizado disponível para acesso também;
+- Firebase -> Para servir de banco de dados vamos utlizar este conjunto de serviços fornecidos pelo próprio Google, em que podem ser armazenados nossos dados e ralizar autenticações. Dessa forma não precisamos lidar muito com o backend, que não é o nosso foco. Para começar, temos que realizar o cadastro na plataforma ([aqui](https://firebase.google.com/?hl=pt));
