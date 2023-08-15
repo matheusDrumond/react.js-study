@@ -109,5 +109,6 @@ Envio do formulário -> O listener onSubmit, ao ser colocado na tag de abertura 
 
 # 10 - Projeto prático 2
 - Para praticar, vamos construir um projeto de Mini Blog baseado no código criado pelo [Matheus Battisti](https://github.com/matheusbattisti). Diferente do último projeto prático, vou colocar alguns tópicos aqui pra vocês, já que esse sistema engloba mais tecnologias e complexidades;
+- Por fim de práticas pessoais, a aplicação vai ser desenvolvida em inglês, mas os comentários e o relatório aquie staram escritos normalmente em português;
 - Código todo comentado e organizado disponível para acesso também;
-- Firebase -> Para servir de banco de dados vamos utlizar este conjunto de serviços fornecidos pelo próprio Google, em que podem ser armazenados nossos dados e ralizar autenticações. Dessa forma não precisamos lidar muito com o backend, que não é o nosso foco. Para começar, temos que realizar o cadastro na plataforma ([aqui](https://firebase.google.com/?hl=pt));
+- Firebase -> Para servir de banco de dados vamos utlizar este conjunto de serviços fornecidos pelo próprio Google, em que podem ser armazenados nossos dados e ralizar autenticações. Dessa forma não precisamos lidar muito com o backend, que não é o nosso foco. Para começar, temos que realizar o [cadastro](https://firebase.google.com/?hl=pt) na plataforma ;
