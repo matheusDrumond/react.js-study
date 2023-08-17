@@ -1,6 +1,6 @@
 // Import the functions from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore } from 'firebase/firebase'
+import { getFirestore } from "firebase/firestore";
 
 // The app's configuration
 const firebaseConfig = {
