@@ -1,0 +1,12 @@
+// Styles / CSS
+import styles from './Login.module.css'
+
+const Login = () => {
+  return (
+    <div>
+        <h1>Log-in</h1>
+    </div>
+  )
+}
+
+export default Login
