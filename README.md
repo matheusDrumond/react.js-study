@@ -121,4 +121,5 @@ Envio do formulário -> O listener onSubmit, ao ser colocado na tag de abertura 
 - VOU PAUSAR O PROJETO POR ENQUANTO, PRA FOCAR NA PRÓXIMA SEÇÃO, DE APROFUNDAMENTO NOS HOOKS, MAS EM BREVE RETOMAREI AO PROJETO (24/08/23);
 
 # 11 - Conhecendo hooks
-Nessa seção vamos conhecer a fundo os hooks mais populares e úteis do próprio React e também algumas funcionalidades relacionadas aos custom hooks;
+Nessa seção vamos conhecer a fundo os hooks mais populares e úteis do próprio React e também algumas funcionalidades relacionadas aos custom hooks. Vale lembrara que todos os hooks, sintaxes e exemplos estarão contemplados dentro dos arquivos da seção;
+- useState -> O useState é um dos hooks mais utilizados no desenolvimento com React, o seu principal objetivo é gerenciar valores, podemos acessá-lo e alterá-lo. Isso permite re-renderizar um componente quando seu valor for mudado, proporcionando ao usuário obter o valor mais recente atribuído ao state, oque não seria possível utilizando variáveis;
