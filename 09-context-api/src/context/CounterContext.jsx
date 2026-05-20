@@ -4,12 +4,13 @@ import { createContext, useState } from 'react'
 export const CounterContext = createContext();
 
 // Criando o provider
+// React 19: <CounterContext> pode ser usado diretamente sem .Provider
 export const CounterContextProvider = ({ children }) => {
     const [counter, setCounter] = useState(0);
 
     return (
-        <CounterContext.Provider value={{counter, setCounter}}>
+        <CounterContext value={{counter, setCounter}}>
             {children}
-        </CounterContext.Provider>
+        </CounterContext>
     )
 }
