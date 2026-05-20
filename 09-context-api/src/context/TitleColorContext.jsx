@@ -21,9 +21,10 @@ export const TitleColorContextProvider = ({ children }) => {
 
     console.log('Title color context: ' + state.color)
 
+    // React 19: <TitleColorContext> pode ser usado diretamente sem .Provider
     return (
-        <TitleColorContext.Provider value={{ ...state, dispatch }}>
+        <TitleColorContext value={{ ...state, dispatch }}>
             {children}
-        </TitleColorContext.Provider>
+        </TitleColorContext>
     )
 }
